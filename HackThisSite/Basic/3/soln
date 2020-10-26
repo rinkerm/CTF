@@ -1,0 +1,7 @@
+Basic 3
+
+Password : b0607ae7
+
+The password is loaded from a file. 
+By inspecting the html code you can find the address for this file (password.php)
+If you append this to the url of the page you are on (www.hackthissite.org/missions/basic/3/password.php) you will see the contents of the file

@@ -1,0 +1,8 @@
+Basic 5
+
+Password : 3bd622e7
+
+Similar to basic 4 in this level there is a password reset link for Sam.
+However, upon inspecting the html code we can see that the email is hardcoded in to the html.
+We then replace the email with our own email and click the reset button. 
+(Note: This will only work if we use our account email with hackthissite)

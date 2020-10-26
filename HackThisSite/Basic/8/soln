@@ -1,0 +1,9 @@
+Basic 8
+
+Password : 21a92c3f
+
+This level has a php script that records your name and makes a temporary file containing a greeting to you.
+We can abuse this using injection.
+Inputing the command: <!--#exec cmd="ls .."--> in the place of our name.
+This gives us the output of ls .. in the resulting file for our name.
+We then use this to access the password file on the server and get the password.

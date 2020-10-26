@@ -1,0 +1,12 @@
+Basic 6
+
+Password : a35c1284
+
+This level uses a basic encryption algorithm. 
+We can see how this works by encrypting our own string. 
+I used abcdefg but you can use any string you wish.
+abcdefg gives acegikm.
+From this we can notice that every letter has been shifted by a different number.
+a>a (0) b>c(1) c>e(2) d>g(3) e>i(4) f>k(5) g>m(6)
+Thus we can take a look at an ascii table and calculate the password from the given encrypted string.
+

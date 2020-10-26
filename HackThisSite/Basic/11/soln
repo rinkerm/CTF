@@ -1,0 +1,14 @@
+Basic 11
+
+Password : somewhere close
+
+This level is quite different from the rest of the basic challenges.
+As we refresh the page we see that all the songs displayed are by Elton John.
+If we go to https://www.hackthissite.org/missions/basic/11/e/ we see that we are in the directory view
+We can then navigate to the end of the directory https://www.hackthissite.org/missions/basic/11/e/l/t/o/n/
+However it appears to be empty. 
+Except we can then try to access the .htaccess file.
+This indicates that there is a hidden directory "DaAnswer"
+If we navigate to that we see: The answer is somewhere close! Just look a little harder.
+This is a little wordplay to tell us that the password is "somewhere close".
+We can then navigate to https://www.hackthissite.org/missions/basic/11/index.php and input the answer to complete the level

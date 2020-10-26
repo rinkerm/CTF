@@ -1,0 +1,12 @@
+Basic 10
+
+Password : 
+
+This level can be passed in two ways.
+The first way is to modify the cookie placed in our browser after unsucessfully submitting a password.
+We find the cookie and change it either through our browser settings or in the browser.
+In the browser we can put javascript:void(document.cookie="level10_authorized=yes"); into the address bar.
+This will change the value of the cookie.
+Then we can simply click the submit button again and pass the level.
+Alternatively, we can capture the request and change the authorized value to pass the level.
+

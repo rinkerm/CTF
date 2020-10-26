@@ -1,0 +1,11 @@
+Basic 7
+
+Password : efca5264
+
+This level has a hidden unencrypted password file saved in the same directory as the page.
+We have to find the name of that password file to open it and see the password.
+Thankfully, there is a script that returns an output fron a UNIX command.
+We can inject our own command into the script by typing ;ls -l. 
+After typing this in we can click on the view button and see the results of our script.
+This shows us that there is a file k1kh31b1n55h.php.
+We can then open this file like before and see the password displayed for us in plain text.
