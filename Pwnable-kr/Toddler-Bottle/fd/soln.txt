@@ -1,0 +1,14 @@
+In this challenge we need to use our knowledge of linux file IO to get the flag
+When we ssh into the server we see three files fd, fd.c, flag.txt
+Naturally, we cannot access flag.txt
+We can look at fd.c
+We can see that it accepts one argument that is an integer
+It then uses that to calculate where in the buffer to read
+If what it reads is equal to LETMEWIN\n it gives us the flag
+By looking at the calculation we see the integer we pass in is subtracted by 0x1234
+We can thus have it read from the start of the buffer.
+In decimal 0x1234 = 4660
+Thus:
+echo "LETMEWIN" | ./fd 4660
+This gives our flag
+mommy! I think I know what a file descriptor is!!

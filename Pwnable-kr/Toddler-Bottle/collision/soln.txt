@@ -1,0 +1,13 @@
+In this challenge we need to create a hash collision to produce the flag
+We can see that the file col.c takes in a string of characters as input
+It then turns the character array into an array of integers
+It then adds the 5 resulting integers and checks it against a value 0x21DD09EC
+So, to solve this we need to come up with 5 integers that when added together will create 0x21DD09EC
+We then need to change them to characters and add pass them as input to the file
+We can find these characters by taking the given string and dividing it by 5
+This gives 0x6C5CEC8 with a remainder of 4
+So, our final string will be four repititions of 0x6C5CEC8 and one occurence of 0x6C5CECC
+Finally, we will need to reverse the bytes when submitting to the file because it is little endian
+./col `echo -e '\xC8\xCE\xC5\x6\xC8\xCE\xC5\x6\xC8\xCE\xC5\x6\xC8\xCE\xC5\x6\xCC\xCE\xC5\x6'`
+Running this command yields our flag
+daddy! I just managed to create a hash collision :)
