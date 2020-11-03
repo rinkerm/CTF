@@ -1,0 +1,4 @@
+In this level we have a file with spaces in its name
+You can print out this file by surround its name in quotes, or using \ to escape the space
+Doing either method gives this flag
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK

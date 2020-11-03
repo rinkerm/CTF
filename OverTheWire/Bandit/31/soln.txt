@@ -1,0 +1,19 @@
+This is the final git repository challenge
+First we clone to our temp directory
+git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+Next we look at the readme file. 
+It appears that we need to push a text file to remote
+So:
+echo "May I come in?" >> key.txt
+git add key.txt
+git commit -m "Add an item"
+This tells us that we have nothing to commit even though we have added a file
+We can check with git status
+This shows us that the key.txt file is untracked
+ls -all shows us that there is a .gitignore which is the culprit
+rm .gitignore
+git add .
+git commit -m "Add an item"
+git push
+This will yield our flag
+56a9bf19c63d650ce78e6ec0354ee45e

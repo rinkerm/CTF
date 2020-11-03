@@ -1,0 +1,8 @@
+This is the final level (as of writing)
+This is an escape challenge
+We need to escape the uppercase shell to be able to get the password
+Fortunately, since this is an interactive shell it is quite easy
+By entering $0 we can reset the shell and enter the normal shell
+From there we can do:
+cat /etc/bandit_pass/bandit33 to get the final flag
+c9c3199ddf4121b10cf581a98d51caee

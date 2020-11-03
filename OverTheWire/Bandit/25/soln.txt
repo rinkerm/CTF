@@ -1,0 +1,13 @@
+In this level we are given a sshkey to log in to bandit26
+Normally this would be easy but bandit26 has a modified shell that kicks us out after printing all the text
+We can bypass this by using the "more" element of the shell
+If our terminal window is small enough that it cannot print the entire message we see "more" appear at the bottom
+We can then use the command interface to open vim by pressing v
+From there we can use the command
+:set shell=/bin/bash
+followed by 
+:shell
+To escape back to a normal shell
+From there we can easily get the password for level 26
+cat /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z 

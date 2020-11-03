@@ -1,0 +1,4 @@
+In this level we are told the flag is in the given file (data.txt_ next to the word millionth
+Thus we can find the flag by doing cat data.txt | grep millionth
+We can then see the flag is
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV

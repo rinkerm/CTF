@@ -1,0 +1,12 @@
+On this level we are tasked with running a program against a localhost port
+If the port gives the password for the current level it will receive the password for the next level
+To do this we must first setup the port to send the password
+First we open a new terminal by using screen
+screen
+echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -l localhost -p 1337
+Then swapping away from screen back to our main terminal we run the program
+./suconnect 1337
+We can now swap back to our screen instance
+screen -r *screeninstance name*
+This will yield our next password
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr

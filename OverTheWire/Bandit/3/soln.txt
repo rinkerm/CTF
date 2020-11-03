@@ -1,0 +1,5 @@
+This level presents us a hidden file
+To find the name of the file we do ls -all
+This tells us that the file is named .hidden
+Thus we can then do cat .hidden to get our flag
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB

@@ -1,0 +1,8 @@
+For this level we must identify the port to send the current password to
+To do this we use nmap
+nmap localhost -p31000-32000 -A
+This tells us the services running on all open ports
+We know that there is one port open that is running an unknown service
+Since the other ports are running the echo service we know the port we are looking for is port 31790
+echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -connect localhost:31790 -ign_eof
+This gives us a RSA private key for use with ssh

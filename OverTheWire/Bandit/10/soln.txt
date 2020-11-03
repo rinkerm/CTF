@@ -1,0 +1,5 @@
+In this level we are given a file that is base64 encrypted
+To get the flag from this file we must decrypt it using base64:
+base64 -d data.txt
+This yields our flag
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR

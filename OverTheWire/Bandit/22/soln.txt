@@ -1,0 +1,11 @@
+In this level we are once again told that cron is executing a job that we need to take a look at
+cat /etc/cron.d/cronjob_bandit23
+This tells us the location of the actual script it is executing, so:
+cat /usr/bin/cronjob_bandit23.sh
+This lets us know that the shell is computing a filename using a md5hash and then copying the password file to it
+We can calculate this file name by recreating the command
+echo I am user bandit23 | md5sum | cut -d ' ' -f l
+This gives us a file to print the contents of
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+This yields our flag
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n

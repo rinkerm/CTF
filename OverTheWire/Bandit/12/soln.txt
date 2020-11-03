@@ -1,0 +1,31 @@
+In this level we have a hexdump of a file that was repeatedly compressed
+We first need to copy this file to the tmp directory so we can save copies of it and create new files
+mkdir /tmp/mydir
+cp data.txt /tmp/mydir
+We then navigate to that directory
+Now we can restore the hexdump to its original format 
+xxd -r data
+We can now start to uncompress the file
+Using the file command we can see that data is a gzip compressed file
+So we rename it to a .gz (mv data data.gz)
+Now we uncompress it
+gunzip data.gz
+We can now use file on this once again to see that it is a bzip2 compressed file
+bzip2 -d data
+Now using file again we see that it is another gzip compressed file
+So we rename it to a gz (mv data.out data.gz)
+Then uncompress it
+gunzip data.gz
+Using file again we can now see it is a tar archive
+tar --extract -f data
+Using file on the resulting file (data5.bin) we see it is another tar archive
+tar --extract -f data5.bin
+Using file again we can see it is once again a bzip2
+bzip2 -d data6.bin
+The resulting file is now a tar archive
+tar --extract -f data6.bin.out
+This gives a gz file, so we rename it (mv data8.bin data8.gz)
+gunzip data8.gz
+Finally we have an ascii text file. 
+Using cat on this file gives our flag
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL

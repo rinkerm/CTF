@@ -1,0 +1,4 @@
+This is the first level.
+In the home directory there is a file called readme
+If you do cat readme you get the flag
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1

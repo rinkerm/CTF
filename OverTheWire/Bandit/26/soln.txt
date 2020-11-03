@@ -1,0 +1,7 @@
+This level is easy assuming you were able to complete bandit25
+In the home directory is a file called bandit27-do
+This runs a command as another user (bandit27)
+So we can use it to print out the next password
+./bandit27-do cat /etc/bandit_pass/bandit27
+This yields our next password
+3ba3118a22e93127a4ed485be72ef5ea

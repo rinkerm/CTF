@@ -1,0 +1,5 @@
+In this level we have a file encrypted by rot 13
+To solve this challenge we have to use tr to decrypt the file
+cat data.txt | tr [A-Z][a-z] [N-ZA-M][n-za-m]
+This will yield our flag
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu

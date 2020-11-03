@@ -1,0 +1,6 @@
+In this level we know that the password is in the readme file in the home directory
+Unfortunately, bash has been modified to immediately close our connection upon connecting
+We can use ssh to execute a single command before we disconnect
+ssh bandit18@bandit.labs.overthewire.org -p2220 "cat readme"
+This yields our next password
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x

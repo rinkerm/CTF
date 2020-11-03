@@ -1,0 +1,6 @@
+In this level we are given two files that are identical save for one line
+This line is our key
+We can find this using diff
+diff passwords.old passwords.new
+This yields our flag
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd

@@ -1,0 +1,7 @@
+This level has us once again finding a file except we now have the stipulation that we have to search over the entire server
+The file also has the following properties: 33 bytes, owned by user bandit7, owned by group bandit 6
+Thus we can use the following command to find the file
+find -size 33c -user bandit7 -group bandit6
+From this we see the flag is located in /var/lib/dpkg/info/bandit7.password
+Using cat on this file yields our flag
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs

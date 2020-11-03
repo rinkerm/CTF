@@ -1,0 +1,13 @@
+This is another git challenge
+We clone the repository to our temp directory
+git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+Next we take a loot at the readme file
+Since there is no info in here we can check the branches, logs, and tags
+Given that we have already passed two challenges involving branches and logs we can assume that this challenge concerns tags
+git tag
+This prings out all the tags in this repository
+We can see that there is a tag called secret
+We can then show the value of this tag
+git show secret
+This gives our flag
+47e603bb428404d265f59c42920d81e5

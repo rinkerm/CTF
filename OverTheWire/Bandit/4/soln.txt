@@ -1,0 +1,4 @@
+This level requires us to find the flag hidden in one of 10 files in the inhere directory
+Each file has a - in its name so we will have to use ~/inhere/filename to print them out
+We can find the flag in -file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh

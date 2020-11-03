@@ -1,0 +1,8 @@
+In this level we have a text file hidden among several other text files in the inhere directory
+We can find the name of the file we are looking for by looking at the given properties:
+human-readable, 1033 bytes in size, not executable
+We can use the find command to narrow down our list of files
+find -depth -size 1033c -readable
+This gives us one file ./maybehere07/.file2
+Using cat on this file gives us our flag
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7

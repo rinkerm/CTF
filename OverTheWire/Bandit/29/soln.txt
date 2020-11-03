@@ -1,0 +1,10 @@
+In this level we once again have to clone a github repository to our temp directory
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+When we print the readme we see that no passwords are put into files in the production code
+This indicates that passwords may be located in a development branch
+We can list all the branches of the repository:
+git branch --all
+We can then switch to the development branch:
+git checkout dev
+Inside the development branch, printing the readme file will give our flag
+5b90576bedb2cc04c86a9e924ce42faf

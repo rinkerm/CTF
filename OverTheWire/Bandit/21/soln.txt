@@ -1,0 +1,10 @@
+In this level we are told cron is executing a scheduled task located in /etc/cron.d
+Natuarally, we look in this folder for this task
+ls /etc/cron.d
+We can see a file named cronjon_bandit22
+Using cat on t his file tells us that it is running a file as bandit22: /usr/bin/cronjob_22
+Using cat on this file shows that it creates a file in tmp and copies the bandit22 password file to it
+So using cat on the tmp file
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+This yields our flag
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI

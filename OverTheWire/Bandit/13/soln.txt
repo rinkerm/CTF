@@ -1,0 +1,6 @@
+In this level we are given a ssh private key to log in to the next level
+We can log in to the next level by passing this key to ssh
+ssh -i sshkey.private bandit14@localhost
+We can then use cat on the passwordfile to get a password for this stage
+cat /etc/bandit_pass/bandit14
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e

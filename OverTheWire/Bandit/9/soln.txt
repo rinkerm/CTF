@@ -1,0 +1,6 @@
+In this level we are given a file data.txt
+We know the flag is in this file, is one of few human readable strings, and is preceeded by several "=" characters
+Thus we can use the following command:
+strings data.txt | grep "=\+"
+This will yield our flag
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk

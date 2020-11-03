@@ -1,0 +1,12 @@
+This is another git repository challenge
+We go to our tmp directory and clone the repository
+ssh://bandit28-git@localhost/home/bandit28-git/repo
+Now we navigate to the directory and once again print out the readme file
+We can now see that the password has been redacted.
+The file also contains a hint about notes
+So, we take a look at the commit notes
+git log
+We can now see that the current commit is after the password has been redacted we can use git checkout to go back to an earlier branch
+git checkout c086d11a00c0648d095d04c089786efef5e01264
+Now if we print out the readme file we can see the password
+bbc96594b4e001778eee9975372716b2

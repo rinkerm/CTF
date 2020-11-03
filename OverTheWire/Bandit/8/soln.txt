@@ -1,0 +1,5 @@
+In this level we are told the flag is contained in the file data.txt and is the online line that occurs only once
+Since uniq only counts adjacent repeated lines we must first sort the text and then use uniq to get our flag
+Thus sort data.txt | uniq -u
+This gives us our flag
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
