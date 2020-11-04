@@ -1,0 +1,5 @@
+This challenge gives us a simple band ranking site where our task is to hack the site so our friend's band "Raging Inferno" is ranked first.
+When we first open the site we get a hint about what the exploit might be given that the first team has a score of over 20 when the scale is between 1 and 5
+When inspecting the code we can see that the forms allow us to manipulate the value submitted
+Thus, we just need to change the value to something obscenely large and submit the form
+This completes the challenge and returns us to the hackthissite challenge page.

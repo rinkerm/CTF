@@ -1,0 +1,8 @@
+This challenge tasks us with extracting the mailing list of a online store and sending it to "SaveTheWhales"
+We start by investigating the submit email form
+We see that if we input "test" it gives us an error message giving us the name of the table we are looking for "email"
+Furthering our investigation we can look at the other pages of the site
+When looking at the products page we can see a query that we can append to
+After some trial and error we can get the emails by adding this to our url:
+products.php?category=1%20UNION%20ALL%20SELECT%20null,%20*,%20null,%20null%20FROM%20email;
+Next, we return to hackthissite and send the emails in a private message to SaveTheWhales to complete the challenge

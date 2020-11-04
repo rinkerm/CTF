@@ -1,0 +1,10 @@
+In this challenge we are tasked with finding the exploit a hacker used to deface the site and then restore the old site
+If we inspect the code of the homepage we find a helpful note left by the hacker.
+It states that the old page was moved to oldindex.html
+If we navigate to oldindex.html we can access the old site.
+It is now time to hunt for the exploit
+Looking at the old page we can find a php form to submit a poem.
+Submitting something lets us see that it just saves the context of the textbox to a file
+So to restore the content of the website we can return to oldindex.html and copy the source code
+We then go back to the submit poem page and paste the code into the content box and enter ../index.html into the title box
+Clicking submit solves the challenge and returns us to the challenge page

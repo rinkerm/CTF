@@ -1,0 +1,7 @@
+In this challenge we are tasked with getting to the admin panel of a site
+On the homepage of the site we can find a hidden login button on the bottom of the page.
+We can edit the code of the page so that it appears in a different text color so it is visible
+This takes us to the login page
+We can manipulate the sql of the login to allow us to bypass the password
+This is done by inputting ' or ''=' as both the username and password
+Doing this and clicking login will complete the challenge and return us to the challenges page
