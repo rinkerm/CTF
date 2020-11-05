@@ -1,0 +1,10 @@
+In this challenge we have a search input bar
+We can also click on view source code to see the code for this search function
+Upon inspection we see that it takes our input and inserts it into a unix command which is then executed
+This is easily exploitable as we can put some text followed by a semicolon and then add our own command
+Using test; ls; we can see what is in our current directory
+We can continually step backwards with .. to find where the /etc directory is as we already know that is where the passwords are stored
+Then, we can use the following command:
+test; cat ../../../../etc/natas_webpass/natas10;
+This will return our password
+nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu

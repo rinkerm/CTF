@@ -1,0 +1,8 @@
+This page gives us another secret input box
+We can once again click on view source to see how the function works
+From this we can see that the secret is encrypted and the encrypted version of the secret is stored there
+We can use this to create our own php script to decrypt the secret
+Running the script (php exploit.php) gives the following secret
+oubWYf2kBq
+Entering this gives our flag
+W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl

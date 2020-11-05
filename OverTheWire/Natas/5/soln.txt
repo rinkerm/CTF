@@ -1,0 +1,7 @@
+This level displays a page saying that we are not logged in 
+If we investigate the page data we can see there is a cookie named loggedin with value 0
+We can edit this in two ways
+1. We can edit it in the development tools in our browser
+2. We can type javascript:void(document.cookie="loggedin=1"); into our browser address bar
+Either way we can now refresh and claim the password
+aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1

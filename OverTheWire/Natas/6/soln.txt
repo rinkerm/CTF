@@ -1,0 +1,7 @@
+This page displays a login that requires a secret phrase
+Clicking on the "view source code" link will open a page that shows the html code of the page
+In th is we can see a file is referenced "/includes/secret.inc"
+In this file we can see the secret code in plaintext:
+FOEIUWGHFEEUHOFUOIU
+Entering this into the login box gives us our flag
+7z3hEENjQtflzgnT29q7wAvMNfZdh0i9

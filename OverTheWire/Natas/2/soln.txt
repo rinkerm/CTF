@@ -1,0 +1,5 @@
+Opening this page says "this page is empty"
+However, when we inspect the code we see a reference to an image stores in files/pixel.png
+If we navigate to /files we can see a document called users.txt
+Opening this file gives us our password
+sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14

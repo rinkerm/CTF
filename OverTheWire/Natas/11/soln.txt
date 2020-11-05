@@ -1,0 +1,13 @@
+This challenge gives us an input box to enter a background color
+It also mentions that the cookies are protecting by XOR encryption
+Well, what is XOR encryption? https://en.wikipedia.org/wiki/XOR_cipher
+From here we can see that it encodes data using the XOR operation against a constant repeating key
+We can also see that due to the fact that plaintext XOR cyphertext = key it is weak to a known-plaintext attack (https://en.wikipedia.org/wiki/Known-plaintext_attack)
+This information will help us when looking at the source code which is also offered to us.
+From this we can see that there is a json array created with value {"showpassword"="no","bgcolor"=#ffffff}
+This is then run through the base64_decode function, xor encrypted, and then json_decoded.
+This value is then saved into our "data" cookie.
+We now know both the cyphertext and the plaintext and can conduct a known-plaintext attack
+By running exploit.php (original cookie value is hardcoded) we can generate the value we need to put into our cookie to get the password
+Adding this value in and refreshing will display the password
+EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3

@@ -1,0 +1,4 @@
+In this level we have to do the same as in level one except right clicking has been disabled
+This requires us to know the hotkey to enter the developer console (F12 on chrome)
+After pressing this we can inspect the source code and find the password hidden in a comment
+ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi

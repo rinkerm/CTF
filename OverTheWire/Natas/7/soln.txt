@@ -1,0 +1,5 @@
+In this page we are presented with two links "home" and "about"
+Inspecting the code of the home page gives us a hint that the password is stored in /etc/natas_webpass/natas8
+When we click on the "About" page we see "index.php?page=about" in our address bar
+If we change this to "index.php?page=/etc/natas_webpass/natas8" we can access the file with our flag
+DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe

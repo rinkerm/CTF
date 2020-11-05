@@ -1,0 +1,7 @@
+In this challenge we are once again presented with a seemingly empty page
+However, there is a hint hidden in the html code stating that not even google will be able to find the answer
+This is a reference to the robots.txt file
+So if we go to /robots.txt we can see that there is a directory s3cr3t which is forbidden for search engines to index
+Heading to /s3cr3t shows us a users.txt file
+Opening this will yield our flag
+Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ

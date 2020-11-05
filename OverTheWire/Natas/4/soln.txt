@@ -1,0 +1,7 @@
+For this challenge we see that we have an access denied error because we are not accessing the page from the correct address
+Because of this we know we must spoof our referrer to the page so that the site thinks we are in fact coming from natas5
+To do this you can use burpsuite
+With burpsuite running you can capture the request and modify the referrer from natas4 to natas5
+Then, we can click "forward" to submit the request
+The resulting webpage will display our next password
+iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq

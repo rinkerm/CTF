@@ -1,0 +1,10 @@
+This is a variation on the last problem
+We have the same search bar but in the source code we can see that they are now sanitizing inputs
+If we look at the code we can see that we cannot use any of the following symbols ";&|"
+However, we know that with grep we can match a string against multiple files
+So:
+a /etc/natas_webpass/natas11 will execute grep -i a /etc/natas_webpass/natas11 dictionary.txt
+This doesn't return anything special, but we know that there must be an a in the password for this to work
+So we can try every character in the alphabet 
+c /etc/natas_webpass/natas11 will yield our flag
+U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK

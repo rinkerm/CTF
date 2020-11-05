@@ -1,0 +1,4 @@
+This is the first level in this game as as such it is quite easy
+We log in using user natas0 and password natas0
+Upon entering the level we can inspect the source code of the page and see the password hidden in a comment
+gtVrDuiDfck831PqWsLEZy5gyDz1clto
