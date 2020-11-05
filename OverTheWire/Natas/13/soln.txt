@@ -1,0 +1,15 @@
+This challenge is almost identical to the previous one
+However, our input is now sanitized to only accept jpg files... sort of...
+We can attack this page very similarly to our last one
+We make a modified version of our payload from the last challenge with two changes
+1. We change natas13 to natas14
+2. We add 4 random characters to the beginning of the file (I used zeros)
+The purpose of those 4 random characters is to give us some useless bytes we can edit in hexedit to make our file appear to be a jpg
+We then save our php file as payload.jpg and open it in hexedit
+We then replace those 4 random characters with the jpg image and application markers "FF D8 FF E0"
+This will fool any checks making it think our file is a jpg
+We can test this by doing "file payload.jpg" in our command line
+This will output "JPEG image data" telling us that our machine believes that the file is a jpg
+We now go back to the site and upload payload.jpg and change the form to submit a php file
+Going to the given address will give us our next password
+Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1

@@ -1,0 +1,7 @@
+This challenge allows us to upload a jpg file to the server
+Interestingly, the input sanitization is a little bit off
+We can actually upload a php file that will be run by the server if we go into inspect element and just change the file extension on the form
+So, we make payload.php to print out the password file stored at /etc/natas_webpass/natas13
+Changing the form to upload a php file and uploading our payload gives us a message with the address of our file
+Navigating to this page gives us our password
+jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
