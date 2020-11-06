@@ -1,0 +1,9 @@
+As we can see when we log in to this level it is almost identical to the last one
+The creator of the level even writes it at the top in lieu of providing us source code
+So, the first thing I did was I attempted to log in and looked at the cookie value
+The first thing that jumped out to me was that this was a hex string
+So, I dropped it into a hex-ascii converter and saw 131-admin (I attemped to log in as admin)
+This told me that it is taking the session id and the username and encoding it into hex and saving it to the cookie
+So, I copied the exploit script from the last challenge and edited it to contain the correct hex encoded value
+After running it I got the password
+eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF

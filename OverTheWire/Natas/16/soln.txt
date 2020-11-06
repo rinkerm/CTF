@@ -1,0 +1,13 @@
+This level is a more difficult version of levels 9 and 10
+In this level we see more characters are not allowed
+This level forces us to brute force the password in a similar method to the previous challenge
+We can use $() to pass the result of a command into the grep -i dictionary.txt command
+If we combine this with something that we know has a return value we can construct a blind attack
+This takes advantage of the fact that when grep does not find any matches it returns ''
+Thus if we take a word that is in the dictionary (I used false) we will see that false[Password] returns nothing whereas false returns text
+Therefore if the return value is blank we know that our query is true and if it contains data we are incorrect
+We can use this to first narrow down our field of characters to test
+Then, using grep's extended regex capabilities we can build our password one character at a time until we have found all 32 characters
+I modified exploit.py from Natas 15 to accomplish this for us
+Running it will give us our password
+8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw

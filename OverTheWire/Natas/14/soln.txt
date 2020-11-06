@@ -1,0 +1,6 @@
+This challenge presents us with a basic username and password login
+We can bypass this by injecting sql to automatically return "True"
+I used the ""="" is always true attack to bypass this
+I put ' or ''=' for both the username and password
+Submitting this gives the flag
+AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J

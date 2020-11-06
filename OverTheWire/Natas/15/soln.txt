@@ -1,0 +1,15 @@
+This level presents us another sql query which we can access
+Unfortunately, this time we cannot see the output.
+However, we can see that when we enter "natas16" into the username field it returns a page that says "This user exists"
+Entering anything else returns "This user does not exist"
+Thus we can attempt a Blind SQL Injection attack (https://owasp.org/www-community/attacks/Blind_SQL_Injection)
+In this case we can use the fact that submitting a query that matches something in the database shows us a page that says "This user exists" to determine if our query returned true
+To figure out the text of the password field in the database we need to brute force it
+We can use the SQL LIKE command with the BINARY operator to make sure we are doing case sensitive comparisons
+However, since we know that the length of Natas passwords are 32 characters we know that this will be an extremely time consuming process.
+Thus, we need to reduce the number of possible characters to check
+To do this we can use %char% to check if a single character is in the password string before attempting to build the password string
+This will still take a long time but it is several orders of magnitude shorter than trying to find a password with 74 possible characters
+I then created a python script to do these comparisons for me and brute force the password
+So, running exploit.py will give the password
+WaIHEacj63wnNIBROHeqi3p9t0m5nhmh

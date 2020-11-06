@@ -1,0 +1,11 @@
+This level at first appears to be another sql manipulation to login
+However when we inspect the source code we can see it is not executing a sql query but is instead looking for a specific session id
+We can see that it assigns a random id between 1 and 640 and assigns it to you when you log in
+It saves this to a cookie with name "PHPSESSID"
+We can also see that on subsequent page visits it checks who you are logged in as by checking this cookie
+So it looks like all we need to do is find out which cookie is associated with the admin login
+We can easily brute force this by using a script to log in incrementally changing our cookie value
+We can check if the session is an admin by checking if the page contains "regular user" (We can see that this displays by attempting to log in manually)
+I did this by making a python script exploit.py that works very similarly to our level 15 script
+Running this gives our password
+4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs

@@ -1,0 +1,12 @@
+This level presents us another injection problem
+Here we have an input box that gives us control over the username of our session
+Looking at the source code we can see that there are debug messages that can help us see what is going on
+As we have learned from past levels we can fill out the form automatically by appending ?name=[OurValue] to the url
+We can also combine this with ?debug to show the debug messages
+Since we need to find a way to set the admin variable to 1 we can look at the debug messages from setting our name to admin
+index.php?debug&name=admin
+From this we can see the server reads until it stops reading in any data, so if we were to add a newline character to the name we could add a second line for the server to read
+So: index.php?debug&name=admin%0Aadmin+1 should do what we want (%0A is a newline in hex)
+Going to this address will write our user file to the server
+Refreshing again will display the flag
+IFekPyrQXftziDEsUr3x21sYuahypdgJ

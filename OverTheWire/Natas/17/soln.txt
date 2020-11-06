@@ -1,0 +1,8 @@
+This level presents us an even more secure version of level 15
+In this level it is exactly the same except they have removed any visual feedback from a query
+Fortunately, there are other ways for us to determine true and false
+In particular, we can use execution time by making use of the SQL sleep() function
+Since an average query will execute in under a second we can use sleep(1) to force the sql to take longer to complete if it is true
+We can then use our same code from level 15 to narrow down our pool of characters and build our password string
+Running this will give us our password
+xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP

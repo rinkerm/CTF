@@ -1,0 +1,11 @@
+This level requires you to capture request and change their contents
+On this level we have two colocated webpages, natas21 and natas21-experimenter
+The first page is just a page that shows whether or not we are logged in as an admin
+The second page allows us to update the page's css
+So, we can capture the request from this site to change our admin variable
+To do this I used burpsuite
+With burpsuite running you can submit a post request by clicking the update button on the page
+I then appended &admin=1 to the post request in burpsuite
+Next, we copy the value of the PHPSESSID cookie from the experimenter page and paste it to the cookie on the natas21 page
+Refreshing the page displays that we are now logged in as an admin and can claim our password
+chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ
