@@ -1,0 +1,15 @@
+In this challenge we are given a tool that uses cookies to draw a picture given our inputs
+When we look at the source code we can see that it reads the cookie into memory and unencrypts it
+In terms of encyption the cookie is a serialized array that is then encoded in base64
+I wrote a decrypt function in the exploit.php script that demonstrates how this works
+We also can see there is a logger object that upon its destructor being called writes its "exitMsg" variable to a file specified in its "logFile" variable
+Since our decrypted cookie is loaded into memory we can inject a logger object into the program through this and when the program fails it will call the logger destructor
+This works because objects that are serialized like this only take their internal variables with them.
+They do not carry function definitions.
+So, we can set the exitMsg to write some php code and use the logFile to create a .php file on the server
+Next, we encrypt this logger object to get our cookie
+Then, if we have an existing "drawing" cookie we delete it
+Then type javascript:void(document.cookie="drawing=encryptedstring") into our address bar
+Refreshing will have the server load our cookie
+We can then navigate to the log file we created to see our password 
+55TBjpPZUUJgVP5b3BnbG6ON9uDPVzCJ

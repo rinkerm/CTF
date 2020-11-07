@@ -1,0 +1,12 @@
+In this level we are given a sql login box
+If we enter anything into the box we can see that if the login does not appear in the database it makes a login
+If we enter the login info for something in the database it displays the information for that login
+We can see in the source code that all of our input is sanitized so it appears SQL injection is not possible
+However, we can instead take note of the size of each item in the database: 64 characters
+Also we should note that due to peculiarities of SQL "admin " and "admin" are virtually identical.
+So we can create a duplicate version of the natas28 login by entering natas28 then 58 spaces and then some other character.
+This will first make our entered string appear different than the existing natas28 login.
+It will then have to be truncated to fit into the database where it will then be functionally identical to the existing natas28 login
+We can then login with whatever password we put for our new login (I used a blank password)
+This prints our password
+JWwR438wkgTsNKBbcJoowyysdM82YjeF

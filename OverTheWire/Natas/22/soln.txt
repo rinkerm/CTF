@@ -1,0 +1,10 @@
+In this level we are given a blank page with a view source code option
+Naturally, we need to look at the source
+We can see there is a php variable called revelio that the code is looking for
+There are two php code blocks
+The first checks if the revelio variable appears and if it does it checks if the session is an admin
+If the session is an admin it allows the page to appear, otherwise it removes the variable
+The second code block displays the next levels login info if the variable appears
+We can actually just capture the page data in burpsuite and capture the level password without setting the cookie to an admin session
+Thus if we add /?revelio to our url and then look at the page data in burpsuite we reveal the password
+D0vlad33nQF0Hz2EP255TP5wSW9ZsRSE

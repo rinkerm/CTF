@@ -1,0 +1,12 @@
+This level appears to be the same as the last one except for the source code
+The source code of the page is extremely short so we know that the only vulnerability must lie in the strcmp function
+If you read the php documentation you will see that if the two variables are not both strings then you will get strange return values
+We abused something similar to this for the last level
+So, by playing around with the data type of our input we should be able to break the code and get our flag
+Additionally, we see that we want the strcmp function to return 0 as !0 = 1 and would make the if statement evaluate to true
+However, !null = 1 as well so if we can get the strcmp function to return null then we will succeed as well
+In the strcmp man page someone has added a note detailing the different types of inputs you could give to this function and what their output would be
+We can see the combination of string and array yields null
+When we submit our password we see that /?passwd="input" is appended to our search bar
+If we  change this to /?passwd[]="whateverwewant" we can break the comparison and get our flag
+GHF6X7YwACaYYssHVY05cFq83hRktl4c

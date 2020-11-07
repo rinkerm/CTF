@@ -1,0 +1,13 @@
+This level presents us with a page where we can select the language of text to display
+We see that we can manipulate this with the ?lang variable to select what file to load
+However, there are some input validation statements in the source code
+Namely, it replaces all instances of ../ to '' and does not allow us to access the natas_webpass directory
+However, we can see that it writes to a log file which we can access using our cookie value (file is natas25_COOKIEVALUE.log)
+So,
+?lang=../.../...//logs/natas25_b5nqp6f7a5uobg80giuv0vsoc7.log
+We can also see that the server writes the user agent of the request to the file.
+So, using burpsuite we can inject some php by changing the user-agent field in the request header
+Here I used the user-agent to print out the password in the __MSG field (Note: you can use __GREETING, __MSG, or __FOOTER)
+<?php global $__MSG; $__MSG=file_get_contents('/etc/natas_webpass/natas26'); ?>
+Adding this to the request in BurpSuite gives our password
+oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T

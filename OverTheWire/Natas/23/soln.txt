@@ -1,0 +1,7 @@
+In this level we get a login text box
+Viewing the source code of the level we can see that it is checking if the password contains "iloveyou" and is valued at greater than 10
+Looking at the way php evaluates comparing strings to integers we can see that if a string contains . e or E it is evaluated as a float
+It also takes any numerical data at the front of the string and uses that for the comparison
+Thus, we can enter any number greater than 10 followed by any string that contains " iloveyou "
+Entering this will reveal the flag
+OsRmXFguozKpTZZ5X14zNO43379LZveg
