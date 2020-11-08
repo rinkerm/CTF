@@ -1,0 +1,19 @@
+This level introduces us to tracing code with gdb
+We are given a binary that takes in a 4digit code
+Naturally, we could brute force this but the intended solution is for those who have no programming skills
+So, how can we figure this out
+First we run a ltrace and see that our input is being put into an atoi function call
+Next we load up gdb
+If we disassemble the main function we can see that our input is being compared to something at ebp+0xc
+Since this comparison takes place at line main+84 we can simply set a breakpoint there and check the value of that register
+So: b *main+84
+r 0000 to run the program and pass in 0000
+When we hit our breakpoint we can simply do x/u $esp+0xc
+This gives us 7123
+Next we run the binary with argument 7123
+We got a new shell
+Typing whoami tells us that we are now leviathan7
+We can then print out the password file
+ahy7MaeBo9
+
+Log in to Leviathan7 to get our congratulations message!

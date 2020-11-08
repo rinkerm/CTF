@@ -1,0 +1,12 @@
+This level is an easier version of an earlier challenge
+Here we are presented with a binary
+Running it tells us it cant find a file called /tmp/file.log
+Okay, so what if we make a /tmp/file.log
+It doesn't seem to do anything besides deleting it
+What if we put something into this file?
+Add "test" to the file through vim
+Leviathan5 prints out what is in the file
+So, we can create a symbolic link to the password file to get it
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+Run the binary leviathan5 to get the password
+UgaoFee4li

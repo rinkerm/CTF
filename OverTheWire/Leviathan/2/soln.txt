@@ -1,0 +1,12 @@
+This level is actually quite complicated
+We need to abuse a quirk in the way the file given to us processes inputs
+If we look at this file with an ltrace we can see it calls access and cat on our input
+access is how it checks if we have permission to access the file we are trying to access
+It determines this by checking the owner of the full filepath
+However, cat does not take the full filepath it prints up until the first space
+So, if we create a file with a space in the name we can get this to check if we own our own file and then print the password file
+So we go to our tmp directory and create a file "test test"
+We then make a symbolic link to our password file ln -s /etc/leviathan_pass/leviathan3 test
+Now we can do ~/printfile "test test"
+This will output our password
+Ahdiemoo1j

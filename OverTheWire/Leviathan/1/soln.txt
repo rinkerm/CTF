@@ -1,0 +1,14 @@
+In this level we are given an executable named check
+Running this file it asks us for a password
+Clearly we need to find out what this password is
+Running gdb and disassembling the main function we can see that it takes in 3 characters
+Next it compares those 3 characters against some string
+If it is correct is sets the userid of the user to some other value
+We can assume that this means if we have the password it will allow us access to all of leviathan2's files
+Thus, we can get the password from /etc/leviathan_pass/leviathan2
+So how do we know what characters to use?
+This problem set explicitly states no coding knowledge is required so while we could brute force this there is no point as there must be an easier way
+Running a ltrace against the executable shows us the strcmp call
+We now can see the password is "sex" (How creative)
+We can now run the program and enter our password and then cat the password file to get our next level password
+ougahZi8Ta

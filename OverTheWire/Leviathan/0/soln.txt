@@ -1,0 +1,8 @@
+In this level the home directory appears empty
+Weird considering all information is supposed to be there
+ls -all shows a hidden .backup folder
+In this folder is a file bookmarks.html
+This contains a lot of html but our password could be hidden in it somewhere
+cat bookmarks.html | grep "leviathan1" 
+Gives our password
+rioGegei8m

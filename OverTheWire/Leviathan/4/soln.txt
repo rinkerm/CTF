@@ -1,0 +1,7 @@
+This level is another easy one
+Our directory *appears* empty
+ls -all reveals a hidden folder .trash
+Inside is a file called bin
+Running it gives us some binary
+Translate it to text and we get our password
+Tith4cokei

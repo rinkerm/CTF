@@ -1,0 +1,7 @@
+In my opinion this level is far easier than the last level
+Here we have a binary that we can run
+If we run it it asks us for password (seem familiar)
+If we run ltrace on it we see that it checks if our entered value is equal to snlprintf
+Entering that gives us a shell as leviathan4
+Cat the password file to get the next password
+vuH0coox6m
