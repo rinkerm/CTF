@@ -1,0 +1,17 @@
+This is a reverse engineering challenge
+We are just given a binary file and need to find the flag within it
+We can start by trying to run ltrace (no dice)
+Using gdb (no dice)
+Finally, we can look at the strings in the file for help
+Using a generic "strings flag" call we can't see much but there is the word UDX repeated quite a few times
+If we expand the size of strings printed we can get a clearer picture
+"This file is protected by UPX executabel packer"
+So, we need to unpack the executable using UPX
+upx -d flag will give us a unpacked version of the flag executable
+Now, we can run GDB on the unpacked file
+First we want to disassemble the main function
+Looking at the assembly code we can see that someone has added a comment telling us what memory address the flag is saved at (0x6c2070)
+Now, we can set a breakpoint at the start of the main function
+We can then step into the main function until we reach the line in question and print out what is saved at that address
+So: x/s *0x6c2070 will give us our flag
+UPX...? sounds like a delivery service :)

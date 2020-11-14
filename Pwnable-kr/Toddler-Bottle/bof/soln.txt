@@ -1,0 +1,12 @@
+In this challenge we get a binary executable bof and the source code bof.c
+If we look at the source code we can see this is clearly a buffer overflow problem
+Specifically given that there is a variable named "overflow me"
+It also contains a variable "key" which originally contains "0xdeadbeef" and we need to get it to have the value "0xcafebabe"
+So, next we need to trace the execution of the program in GDB. 
+We can do this by inputting some normal input and printing out the stack after it is taken in and saved to see how many characters we need to insert to overwrite the key value
+From the output of the stack we can see that we need to insert 52 characters before we can overwrite key
+So we made a program exploit.py to generate our string and allow us to interact with the terminal once we are done
+Note, we had to reverse the order of the bytes on the key string because the host server is little endian
+Running this and then entering anything will allow us to access a shell
+We can then do cat flag to get our flag
+daddy, I just pwned a buFFer :)
