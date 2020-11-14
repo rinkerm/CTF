@@ -1,0 +1,18 @@
+This is another pwn challenge
+In this we are given a port to ssh into
+Here we can find the source code of a file and the executable version
+If we run this we can see that it takes in a name and then will seg fault when taking in our passcode
+Looking at the source code we can see that it allocates 100 characters for our name and then calls the login function
+This function asks for 2 passcodes.
+However, since the scanf does not work we can not get in through this way
+If we use gdb to disassemble the binary file we can find some interesting information
+We can see that the difference between the location of where our name is stored in the stack and passcode1 is actually 96 bytes
+This is smaller than the buffer allocated for our name so we can use this
+However, this does not help us with the second passcode
+So, instead we need to inject a command to print out the flag instead of trying to get the passcodes into the correct places on the stack
+This is done using the global offset table
+So, we can write into our buffer the address of the system call to print the flag file so that the fflush() function will use this code
+This is done by creating a name that is exactly 96 characters followed by the address of the fflush function followed by the address of the system function (given in decimal format in a string)
+For simplicity I wrote exploit.py to handle this for me 
+Running this function will give us our flag
+Sorry mom.. I got confused about scanf usage :(
