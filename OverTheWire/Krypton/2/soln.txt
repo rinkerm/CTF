@@ -1,0 +1,9 @@
+In this challenge we know from the readme that we are looking at a caesar cipher
+We can use the binary given in our temp directory to see how it encrypts a plaintext.
+We can make a keyfile containing "A" and see what letter it is changed to so we can see the offset
+As with the caesar cipher all letters are converted by the same offset we can decipher and given cipher text from just one letter
+We see from this test that A->M
+Thus we can take the krypton3 file and run the following command
+cat krypton3 | tr '[M-ZA-Lm-za-l]' '[A-Za-z]'
+This yield our password:
+CAESARISEASY

@@ -1,0 +1,11 @@
+In this challenge we are given an alphabet substitution cipher
+This challenge is relatively easy but it does require a bit of legwork in terms of frequency analysis
+We are given 4 other ciphertexts encrypted using the same key. We can use these to conduct some frequency analysis on characters
+We can then use this information to find the key by manually or automatically solving the cipher text
+This can be done using some online tools to make filling it out faster and can pretty easily be cracked automatically once a few words/letters have been filled in
+ex. start by solving for "the" as this can start to open up the cipher
+Eventually, we can find the key is: 'BOIHGKNQVTWYURXZAJEMSLDFPC'
+We can then use tr to find the plaintext of the password file
+cat kyptos4 | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' 'BOIHGKNQVTWYURXZAJEMSLDFPC'
+This gives us the message
+WELL DONE THE LEVEL FOUR PASSWORD IS BRUTE

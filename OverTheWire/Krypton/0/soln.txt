@@ -1,0 +1,4 @@
+This challenge is an easy warmup
+We are given a base64 string S1JZUFRPTklTR1JFQVQ=
+Decode this using base64 -d to get the flag
+KRYPTONISGREAT

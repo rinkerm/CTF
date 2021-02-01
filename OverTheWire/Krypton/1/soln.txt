@@ -1,0 +1,6 @@
+Note: The files for this are not in the home directory, you need to navigate to /../../krypton/krypton1 to find the files
+The password file is encrypted using rot13 which is a common/simple rotation algorithm
+To decrypt the text we can do cat krypton2 | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+This will output the text LEVEL TWO PASSWORD ROTTEN
+Thus our password is:
+ROTTEN

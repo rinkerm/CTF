@@ -1,0 +1,8 @@
+In this challenge we are given a stream cipher
+We have a binary encrypt6 which will encrypt our plaintext using the keyfile.dat in the directory
+We can essentially create a copy of this key by giving a plaintext file of all "0" in this case our "0" is "A"
+We create a file of 100 As as this should be a sufficient size to see a pattern
+From this we can find that the key is a set of 30 repeating characters "EICTDGYIYZKTHNSIRFXYCPFUEOCKRN"
+We can use this with a simple python program to decrypt our ciphertext
+crack.py is included in this repository
+From this, we get our plaintext LFSRISNOTRANDOM

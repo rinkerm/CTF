@@ -1,0 +1,7 @@
+This challenge gives us a vignere cipher with 2 found texts encrypted using the same key as our ciphertext
+Additionally, we are given the length of the key
+Since the vignere cipher is well known there are many automated analysis tools that we can use to find the key easily
+We can take one of our foundtexts and use it with the given key length to produce our key
+Through this we find that it is frekey
+Next, we can decipher our ciphertext using this key to get our password:
+CLEARTEXT

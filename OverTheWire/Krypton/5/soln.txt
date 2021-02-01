@@ -1,0 +1,11 @@
+In this challenge we have another vignere cipher with the same kind of situation except now we do not know the keylength
+Using online tools as before we can instead analyze the cipher text to see if we can find a pattern in them
+From this we can see that two of our cipher texts likely have a keylength of 18 while the last has a keylength of 9
+This is likely caused by the irregular breaks in text to disguise the word lengths. 
+Since we know that the key is the same for all texts we can safely assume the key is 9.
+This is easier for us to determine as 9|18. 
+Thus, we can fix the length of our key at 9 and see what happens for all our texts.
+We get some weird and different results for each of our texts. However, for found1  we can see the key is xeylencth
+This looks a lot like "keylength" so we can try this as the program is likely confused due to the irregular breaks
+This works and will give us our password when we use the krypton6 text on it
+RANDOM
